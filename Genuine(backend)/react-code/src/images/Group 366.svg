@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="62" viewBox="0 0 72 62">
+    <defs>
+        <style>
+            .cls-1{opacity:.156}.cls-2{fill:#d6d6d6;font-size:24px;font-family:Roboto-Medium,Roboto;font-weight:500;text-decoration:line-through}
+        </style>
+    </defs>
+    <g id="Group_366" data-name="Group 366" transform="translate(-360 -580)">
+        <g id="Group_372" data-name="Group 372">
+            <g id="Group_5" class="cls-1" data-name="Group 5" transform="translate(360 590)">
+                <path id="Path_5" d="M57 6H1a1 1 0 0 0-1 1v44a1 1 0 0 0 1 1h56a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 44H2V8h54z" data-name="Path 5"/>
+                <path id="Path_6" d="M16 28.138a5.569 5.569 0 1 0-5.569-5.569A5.575 5.575 0 0 0 16 28.138zM16 19a3.569 3.569 0 1 1-3.569 3.57A3.574 3.574 0 0 1 16 19z" data-name="Path 6"/>
+                <path id="Path_7" d="M7 46a1 1 0 0 0 .66-.249l16.313-14.362 10.3 10.3a1 1 0 0 0 1.414-1.414l-4.807-4.807 9.181-10.054 11.263 10.324a1 1 0 1 0 1.351-1.475l-12-11a1.031 1.031 0 0 0-.72-.262 1 1 0 0 0-.694.325l-9.794 10.727-4.743-4.743a1 1 0 0 0-1.368-.044L6.339 44.249A1 1 0 0 0 7 46z" data-name="Path 7"/>
+            </g>
+            <text id="_" class="cls-2" data-name="+" transform="translate(425 602)">
+                <tspan x="-6.686" y="0">+</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,27 @@
+.header{
+    &-Appbar{
+        background-color: #006d7b;
+    }
+
+    &-WelcomeIcon{
+        width: 159px;
+        height: 61px;
+        border-radius: 6px;
+        background-color: #00515c;
+    
+        &-Text{
+            width: 86px;
+            height: 36px;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.43;
+            letter-spacing: normal;
+            text-align: left;
+            color: #ffffff;
+        }
+    }
+
+}

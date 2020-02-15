@@ -1,0 +1,28 @@
+.Card{
+  display: flex;
+  width: 15rem;
+  height: 15rem;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  border: solid 1px #ffcece;
+  background-color: #f5fffb;
+  //margin-bottom: 2rem;
+
+
+  img{
+    background-color: white;
+    margin-bottom: 1rem;
+  }
+  &__CatgName{
+    color: #5c5c5c;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+
+  }
+  &__ProductCount{
+    color: #0e508c;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+}

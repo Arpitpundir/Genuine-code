@@ -1,0 +1,66 @@
+.Button{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  border-radius: 1rem;
+  transition: all .2s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Alata', sans-serif;
+  font-size: 15px;
+  margin: 1rem;
+  //width: 20rem;
+
+  &:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+      
+    &::after{
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+  }
+
+  &:active{
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &.Button--1{
+    width: 20rem;
+  }
+
+  &.Button--2{
+    width: 10rem;
+    border-radius: .5rem;
+  }
+  &.Button--3{
+    width: max-content;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid #F8F8F8;
+    color: #0058ff;
+    padding: 1rem 1rem;
+    margin-left: 1rem;
+    border: 0;
+    border-radius: 4px;
+  }
+  &.Button--4{
+    background-color: #006d7b;
+    color: white;
+  }
+  &.Button--5{
+    background-color:  #dff0fd;
+  }
+}
+.Auth{
+  background-color: white;
+}
+.Submit{
+  background-color:#1f6d7b;
+  color: white;
+}

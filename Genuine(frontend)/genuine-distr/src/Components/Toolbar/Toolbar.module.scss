@@ -1,0 +1,12 @@
+.Toolbar{
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  background-color: #006d7b;
+  //min-width: 100%;
+  //height: 100%;
+  //height: 12%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 3rem;
+}

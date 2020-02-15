@@ -1,0 +1,14 @@
+.initial:{
+      height: "100%";
+      width: "100%";
+}
+.firstRow:{
+      height:"8%";
+      width: "94%";
+      margin: "20px";
+}
+.secondRow:{
+      height: "92%";
+      width: "100%";
+      padding: "30px";
+}

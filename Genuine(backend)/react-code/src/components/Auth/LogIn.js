@@ -1,0 +1,131 @@
+import React from 'react';
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
+import SaveIcon from '@material-ui/icons/Save';
+import axios from "axios";
+import { getThemeProps } from '@material-ui/styles';
+const useStyles = makeStyles(theme => ({
+    container: {
+        margin:"20px"
+        },
+        manfId:{
+            fontFamily: "Roboto",
+            fontSize: "18px",
+            fontWeight: "500",
+            fontStyle: "normal",
+            fontStretch: "normal",
+            lineHeight: "1.17",
+            letterSpacing: "normal",
+            textAlign: "center",
+            color: "#6a6a6a",
+            textAlign: "left"
+        },
+        date:{
+            
+            fontFamily: "Roboto",
+            fontSize: "18px",
+            fontWeight: "500",
+            fontStyle: "normal",
+            fontStretch: "normal",
+            lineHeight: "1.17",
+            letterSpacing: "normal",
+            textAlign: "center",
+            color: "#6a6a6a",
+            textAlign: "left"
+        },
+        input: {
+            display: 'none',
+        },
+        uploadLogoText:{
+            fontFamily: "Roboto",
+            fontSize: "16px",
+            fontWeight: "500",
+            fontStyle: "normal",
+            fontStretch: "normal",
+            lineHeight: "1.19",
+            letterSpacing: "normal",
+            textAlign: "center",
+            color: "#4d4d4d",
+        },
+        button: {
+            margin: theme.spacing(1),
+        },
+}));
+
+
+
+export default function TextFields(props) {
+    const classes = useStyles();
+    const [values, setValues] = React.useState({
+        email: '',
+        password: ""
+    });
+
+    const handleChange = name => event => {
+        setValues({ ...values, [name]: event.target.value });
+    };
+
+    const logIn = async (e) => {
+        e.preventDefault();
+        const res = await axios({
+            method: 'POST',
+            url: 'http://127.0.0.1:3000/api/v1/manufacturer/login',
+            data: {
+                email:values.email,
+                password:values.password,
+            }
+        });
+        if (res.data.status === 'success') {
+            console.log(res.data.manf._id);
+            props.changeMainSection(2, res.data.manf, res.data.manf._id);
+        }
+    };
+
+return (
+    <form container className={classes.container} noValidate autoComplete="off" onSubmit = {e => logIn(e)}>
+        <Grid item xs = {12}>
+            <div className = {classes.manfId}>ManufacturerId: 125098</div>
+            <div className = {classes.date}>Date: 12/12/2019</div>
+        </Grid>
+        <Grid xs = {12} item>
+        <TextField
+            required
+            id="standard-required"
+            label="Email"
+            className={classes.textField}
+            margin="normal"
+            placeholder = "Email"
+            onChange={handleChange('email')}
+        />
+        </Grid>
+        <Grid xs = {12} item>
+        <TextField
+            required
+            id="standard-required"
+            label="Phone"
+            className={classes.textField}
+            margin="normal"
+            placeholder = "Password"
+            onChange={handleChange('password')}
+        />
+        </Grid>
+        <Grid item>
+        <Button
+        variant="contained"
+        color="primary"
+        size = "large"
+        type = "submit"
+        className={classes.button}
+        startIcon={<SaveIcon />}
+        >
+        Save
+        </Button>
+        </Grid>
+    </form>
+    );
+}
